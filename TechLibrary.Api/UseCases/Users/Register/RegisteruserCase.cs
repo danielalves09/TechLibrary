@@ -1,5 +1,7 @@
 ﻿using TechLibrary.Api.Domain.Entities;
 using TechLibrary.Api.Infraestructure;
+using TechLibrary.Api.Infraestructure.DataAcess;
+using TechLibrary.Api.Infraestructure.Security.Cryptography;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
 using TechLibrary.Exception;
@@ -13,11 +15,12 @@ namespace TechLibrary.Api.UseCases.Users.Register
 
             Validate(request);
 
+            var cryptography = new BcryptAlgorithm();
             var entity = new User
             {
                 Name = request.Name,
                 Email = request.Email,
-                Password = request.Password
+                Password = cryptography.HashPassword(request.Password)
             };
 
             var dbContext = new TechLibraryDbContext();

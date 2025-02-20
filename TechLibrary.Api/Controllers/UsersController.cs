@@ -14,7 +14,8 @@ namespace TechLibrary.Api.Controllers
     {
         [HttpPost]
         [ProducesResponseType(typeof(ResponseRegisteredUserJson),StatusCodes.Status201Created)]
-        public IActionResult Create(RequestUserJson request)
+        [ProducesResponseType(typeof(ResponseRegisteredUserJson), StatusCodes.Status400BadRequest)]
+        public IActionResult Register(RequestUserJson request)
         {
 
             try
