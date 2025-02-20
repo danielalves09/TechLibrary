@@ -16,7 +16,7 @@ namespace TechLibrary.Exception
         {
             _errors = errorMessages; 
         }
-        public override List<string> GetErrorMessages() => _errors
+        public override List<string> GetErrorMessages() => _errors;
        
 
         public override HttpStatusCode GetStatusCode() => HttpStatusCode.BadRequest;
