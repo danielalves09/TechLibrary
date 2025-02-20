@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLibrary.Api", "TechLibr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLibrary.Communication", "TechLibrary.Communication\TechLibrary.Communication.csproj", "{2CC7C314-2B33-4E44-AE34-21854B04C6DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechLibrary.Exception", "TechLibrary.Exception\TechLibrary.Exception.csproj", "{4887D9C4-FD69-4404-91DA-5678D492BBFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2CC7C314-2B33-4E44-AE34-21854B04C6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CC7C314-2B33-4E44-AE34-21854B04C6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CC7C314-2B33-4E44-AE34-21854B04C6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4887D9C4-FD69-4404-91DA-5678D492BBFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4887D9C4-FD69-4404-91DA-5678D492BBFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4887D9C4-FD69-4404-91DA-5678D492BBFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4887D9C4-FD69-4404-91DA-5678D492BBFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

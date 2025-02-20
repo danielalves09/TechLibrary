@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TechLibrary.Api.UseCases.Users.Register;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
+using TechLibrary.Exception;
 
 namespace TechLibrary.Api.Controllers
 {
@@ -15,11 +16,18 @@ namespace TechLibrary.Api.Controllers
         public IActionResult Create(RequestUserJson request)
         {
 
-            var useCase = new RegisteruserCase();
+            try
+            {
+                var useCase = new RegisteruserCase();
 
-            var response = useCase.Execute(request);
+                var response = useCase.Execute(request);
 
-            return Created(string.Empty, response);
+                return Created(string.Empty, response);
+            }
+            catch (TechLibraryException ex)
+            {
+                return BadRequest(ex.GetErrorMessages());
+            }
         }
 
     }
