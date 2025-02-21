@@ -1,10 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TechLibrary.Api.UseCases.Users.Register;
 using TechLibrary.Communication.Requests;
 using TechLibrary.Communication.Responses;
-using TechLibrary.Exception;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace TechLibrary.Api.Controllers
 {
@@ -18,28 +15,14 @@ namespace TechLibrary.Api.Controllers
         public IActionResult Register(RequestUserJson request)
         {
 
-            try
-            {
+            
                 var useCase = new RegisteruserCase();
 
                 var response = useCase.Execute(request);
 
                 return Created(string.Empty, response);
-            }
-            catch (TechLibraryException ex)
-            {
-                return BadRequest(new ResponseErrorMessagesJson
-                {
-                    Errors = ex.GetErrorMessages()
-                });
-            }
-            catch 
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError,new ResponseErrorMessagesJson
-                {
-                    Errors = ["Erro Desconhecido"]
-                });
-            }
+            
+            
         }
 
     }
