@@ -7,13 +7,13 @@ O **TechLibrary** é uma API desenvolvida durante a **Next Level Week (NLW)** da
 ## ⚙️ Funcionalidades
 
 - 👤 **Criação de Usuários e Autenticação**: Cadastro de novos usuários com autenticação segura.  
-- 🔒 **Criptografia de Senhas**: Utilização do algoritmo **BCrypt** para proteger dados sensíveis.  
+- 🔒 **Criptografia de Senhas**: Utilização do algoritmo **BCrypt**.  
 - 🗄️ **Integração com Banco de Dados**: Persistência de dados utilizando **SQLite** e **Entity Framework Core**.  
 - 🔑 **Implementação de Tokens JWT**: Autenticação e autorização seguras usando **JSON Web Token**.  
 - 🛠️ **Tratamento de Exceções Personalizadas**: Respostas claras e seguras para erros do sistema.  
-- 📖 **Listagem de Livros**: Consulte os livros disponíveis na biblioteca.  
-- 📊 **Paginação e Filtragem**: Otimize a recuperação de livros utilizando filtros personalizados e paginação.  
-- 📅 **Reserva de Livros**: Realize reservas de livros diretamente pela API.  
+- 📖 **Listagem de Livros**: Consulta de livros disponíveis na biblioteca.  
+- 📊 **Paginação e Filtragem**: Otimiza a recuperação de livros utilizando filtros personalizados e paginação.  
+- 📅 **Reserva de Livros**: Realiza reservas de livros diretamente pela API.  
 
 ## 🛠️ Tecnologias Utilizadas
 
