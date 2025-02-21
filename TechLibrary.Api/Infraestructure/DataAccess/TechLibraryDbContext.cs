@@ -6,6 +6,7 @@ namespace TechLibrary.Api.Infraestructure.DataAcess
     {
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Book> Books { get; set; }
         override protected void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite("Data Source=C:\\CURSOS\\REPOSITORIOS\\NWL - ROCKETSEAT\\TechLibrary\\BD\\TechLibraryDb.db");
